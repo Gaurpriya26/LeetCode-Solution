@@ -37,7 +37,7 @@ class Solution {
             return dummyHead.next;          
     }
     ListNode getMid(ListNode head){
-        ListNode midPrev = null;
+          ListNode midPrev = null;
         while (head != null && head.next != null) {
             midPrev = (midPrev == null) ? head : midPrev.next;
             head = head.next.next;
