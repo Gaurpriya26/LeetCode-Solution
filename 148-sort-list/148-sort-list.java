@@ -37,13 +37,14 @@ class Solution {
             return dummyHead.next;          
     }
     ListNode getMid(ListNode head){
-          ListNode midPrev = null;
-        while (head != null && head.next != null) {
-            midPrev = (midPrev == null) ? head : midPrev.next;
-            head = head.next.next;
+        ListNode slow=head;
+        ListNode fast= head;
+        while (fast.next != null && fast.next.next != null) {
+            slow=slow.next;
+            fast = fast.next.next;
         }
-        ListNode mid = midPrev.next;
-        midPrev.next = null;
+        ListNode mid = slow.next;
+        slow.next = null;
         return mid;
     }
 }
