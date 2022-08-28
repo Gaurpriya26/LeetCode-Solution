@@ -12,7 +12,7 @@ class Solution {
             }
         }
            for(int row = 1 ; row < mat.length; row ++){
-            for (int i =row ; i< mat.length-1 ; i++){
+        for (int i =row ; i < mat.length - 1 ; i++){
             int col = 0;
             for (int j =row;j<mat.length-1 && col<mat[0].length- 1;j++,col ++) {
                 if (mat[j][col] > mat[j + 1][col + 1])
