@@ -1,6 +1,6 @@
 class Solution {
     public int[][] diagonalSort(int[][] mat) {
-        for(int col=0;col<mat[0].length;col++)
+        for(int col=0;col<mat[0].length-1;col++)
         for(int i=0;i<mat.length;i++){
             int row=0;
             for(int j=col;j<mat[0].length-1 && row<mat.length-1;j++,row++){
