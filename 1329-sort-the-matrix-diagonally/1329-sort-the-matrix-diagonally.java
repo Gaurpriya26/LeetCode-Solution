@@ -1,21 +1,20 @@
 class Solution {
     public int[][] diagonalSort(int[][] mat) {
         for(int col=0;col<mat[0].length;col++)
-        for(int row=0;row<mat.length;row++){
-            int i=0;
-            for(int j=col;j<mat[0].length-1 && i<mat.length-1;j++,i++){
-                if(mat[i][j]>mat[i+1][j+1]){
-                    int temp=mat[i][j];
-                    mat[i][j]=mat[i+1][j+1];
-                    mat[i+1][j+1]=temp;
+        for(int i=0;i<mat.length;i++){
+            int row=0;
+            for(int j=col;j<mat[0].length-1 && row<mat.length-1;j++,row++){
+                if(mat[row][j]>mat[row+1][j+1]){
+                    int temp=mat[row][j];
+                    mat[row][j]=mat[row+1][j+1];
+                    mat[row+1][j+1]=temp;
                 }
             }
         }
            for(int row = 1 ; row < mat.length; row ++){
-        for (int i = row ; i < mat.length - 1 ; i++){
+            for (int i =row ; i< mat.length-1 ; i++){
             int col = 0;
-            for (int j = row ; j < mat.length - 1 && col < mat[0].length - 1 ; j++ , col ++)
-            {
+            for (int j =row;j<mat.length-1 && col<mat[0].length- 1;j++,col ++) {
                 if (mat[j][col] > mat[j + 1][col + 1])
                 {
                     int temp = mat[j][col];
