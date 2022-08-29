@@ -9,7 +9,7 @@ class Solution {
         return count;
     }
     
-    private boolean isEven(int num) {
+    public static boolean isEven(int num) {
         int sum = 0;
         
         while(num > 0) {
