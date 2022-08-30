@@ -14,7 +14,7 @@ class Solution {
         } 
         
         if(i<0 || j<0){
-            return 20002;
+            return 20004;
         }
         
         if(dp[i][j]!=0) return dp[i][j];
