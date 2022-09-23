@@ -1,7 +1,6 @@
 class Solution {
-    private static long mod = 1000000007;
-
     public static int concatenatedBinary(int n) {
+        long mod = 1000000007;
         long ans = 0;
         for (int num = 1; num <= n; num++) {
             int value = num;
