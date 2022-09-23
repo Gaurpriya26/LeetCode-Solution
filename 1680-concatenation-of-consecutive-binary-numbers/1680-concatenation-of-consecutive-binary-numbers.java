@@ -2,13 +2,10 @@ class Solution {
     public static int concatenatedBinary(int n) {
         long mod = 1000000007;
         long ans = 0;
-        for (int num = 1; num <= n; num++) {
-            int value = num;
-            while (value != 0) {
-                value = value >> 1;
-                ans = (ans << 1) % mod;
-            }
-            ans = (ans + num) % mod;
+        int size=0;
+        for (int i= 1; i <= n; i++) {
+           if((i& (i-1))==0) size++;
+            ans=(ans<<size|i)%mod;
         }
         return (int)ans;
     }
