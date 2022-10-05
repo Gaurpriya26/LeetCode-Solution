@@ -26,12 +26,12 @@ class Solution {
     public void insert(TreeNode root, int val, int depth, int n){
         if(root==null) return;
         if(n==depth-1){
-           TreeNode t=root.left;
-            root.left=new TreeNode(val);
-            root.left.left=t;
-            t=root.right;
-            root.right=new TreeNode(val);
-            root.right.right=t;
+           TreeNode t=new TreeNode(val);
+            t.left=root.left;
+            root.left=t;
+            TreeNode a=new TreeNode(val);
+            a.right=root.right;
+            root.right=a;
         }
             
         else{
