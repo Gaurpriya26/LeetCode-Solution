@@ -1,13 +1,16 @@
 public class Solution {
-    public int[] findErrorNums(int[] nums) {
-        Arrays.sort(nums);
+   public int[] findErrorNums(int[] nums) {
+        int[] arr = new int[nums.length + 1];
         int dup = -1, missing = 1;
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] == nums[i - 1])
-                dup = nums[i];
-            else if (nums[i] > nums[i - 1] + 1)
-                missing = nums[i - 1] + 1;
+        for (int i = 0; i < nums.length; i++) {
+            arr[nums[i]] += 1;
         }
-        return new int[] {dup, nums[nums.length - 1] != nums.length ? nums.length : missing};
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] == 0)
+                missing = i;
+            else if (arr[i] == 2)
+                dup = i;
+        }
+        return new int[]{dup, missing};
     }
 }
