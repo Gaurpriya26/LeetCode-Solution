@@ -17,11 +17,3 @@ class Solution {
         return ans;   
     }
 }
-class main{
-    public static void main(String args[]){
-        Scanner sc=new Scanner(System.in);
-        String[] strs=new String[10000];
-        Solution s=new Solution();
-        System.out.print(s.groupAnagrams(strs));
-    }
-}
