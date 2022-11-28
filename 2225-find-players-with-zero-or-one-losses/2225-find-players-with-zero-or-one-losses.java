@@ -34,11 +34,5 @@ class Solution {
             
     }
 }
-class Main{
-    public static void main(String args[]){
-        int[][] matches=new int[100000][2];
-        Solution s=new Solution();
-        System.out.print(s.findWinners(matches));
-    }
-}
+
     
