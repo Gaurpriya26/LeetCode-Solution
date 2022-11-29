@@ -12,13 +12,3 @@ class Solution {
         return count;
     }
 }
-class main{
- public static void main(String args[] ){
-     Solution a= new Solution();
-     Scanner sc=new Scanner(System.in);
-     String s= sc.nextLine();
-     System.out.println(a.lengthOfLastWord(s));
-     
-     
- }
-}
