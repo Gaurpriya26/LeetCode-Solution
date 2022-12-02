@@ -14,13 +14,4 @@ public int uniquePaths(int m, int n) {
         }
         return dp[m-1][n-1];
     }
-};
-class Main{
-    public static void main(String args[]){
-        Solution s= new Solution();
-        Scanner sc=new Scanner(System.in);
-        int m=sc.nextInt();
-        int n= sc.nextInt();
-        System.out.print(s.uniquePaths(m,n));
-    }
 }
