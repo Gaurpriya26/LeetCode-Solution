@@ -30,12 +30,6 @@ class Solution
             s2= s.charAt(i)+s2;
         }
         int[][] dp= new int[m+1][m+1];
-        for(int i=0;i<m+1;i++){
-            for(int j=0;j<m+1;j++){
-                if(i==0 || j==0)
-                dp[i][j]=0;
-            }
-        }
        for(int i=1;i<m+1;i++){
             for(int j=1;j<m+1;j++){
                 if(s.charAt(i-1)== s2.charAt(j-1))
